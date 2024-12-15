@@ -1,6 +1,8 @@
--- Key mappings for moving between splits
-vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = "Move to the left split" })
-vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = "Move to the right split" })
-vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = "Move to the below split" })
-vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = "Move to the above split" })
+local map = vim.keymap.set
+local opts = { silent = true, noremap = true }
 
+-- Navigate splits using Ctrl + h/l/j/k
+map('n', '<C-h>', '<C-w>h', opts)
+map('n', '<C-l>', '<C-w>l', opts)
+map('n', '<C-j>', '<C-w>j', opts)
+map('n', '<C-k>', '<C-w>k', opts)
