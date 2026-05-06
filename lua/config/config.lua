@@ -29,7 +29,8 @@ vim.opt.confirm = true            -- ask to save instead of failing
 vim.opt.undofile = true           -- persistent undo across sessions
 vim.opt.list = true               -- show invisible whitespace
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
-vim.opt.fillchars = { eob = " ", fold = " ", foldopen = "", foldclose = "" }
+-- foldopen/foldclose are owned by nvim-ufo's foldtext, no need to set them here
+vim.opt.fillchars = { eob = " ", fold = " " }
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 vim.opt.pumheight = 12            -- shorter completion popup
 vim.opt.laststatus = 3            -- single global statusline
