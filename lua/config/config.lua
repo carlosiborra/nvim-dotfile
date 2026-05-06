@@ -1,20 +1,58 @@
-vim.g.mapleader = " "  -- Substitute leader key '\' to a space
+vim.g.mapleader = " "      -- Space as leader
+vim.g.maplocalleader = "\\" -- backslash as local leader (sidekick chat uses this)
 
 -- Basic settings
-vim.opt.number = true          -- Show line numbers
---vim.opt.relativenumber = true  -- Show relative line numbers
-vim.opt.wrap = false           -- Disable line wrapping
-vim.opt.tabstop = 4            -- Number of spaces that a <Tab> in the file counts for
-vim.opt.shiftwidth = 4         -- Number of spaces to use for each step of (auto)indent
-vim.opt.expandtab = true       -- Use spaces instead of tabs
-vim.opt.smartindent = true     -- Smart indentation
-vim.opt.cursorline = true      -- Highlight the current line
-vim.opt.termguicolors = true   -- Enable 24-bit RGB colors
-vim.opt.mouse = 'a'            -- Enable mouse support
-vim.opt.clipboard = 'unnamedplus' -- Use system clipboard
-vim.opt.ignorecase = true      -- Ignore case when searching
-vim.opt.smartcase = true       -- Override ignorecase if search contains capitals
-vim.opt.updatetime = 300       -- Faster completion
-vim.opt.signcolumn = 'yes'     -- Always show the signcolumn
+vim.opt.number = true             -- show line numbers
+vim.opt.relativenumber = true     -- relative line numbers
+vim.opt.wrap = false              -- no line wrap
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.smartindent = true
+vim.opt.cursorline = true
+vim.opt.termguicolors = true
+vim.opt.mouse = "a"
+vim.opt.clipboard = "unnamedplus"
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.updatetime = 250          -- snappier CursorHold + LSP signs
+vim.opt.timeoutlen = 400          -- faster which-key popup
+vim.opt.signcolumn = "yes"
 
+-- IDE-grade quality of life
+vim.opt.scrolloff = 8             -- keep cursor 8 lines from edges
+vim.opt.sidescrolloff = 8
+vim.opt.splitbelow = true         -- new horizontal splits go below
+vim.opt.splitright = true         -- new vertical splits go right
+vim.opt.splitkeep = "screen"      -- avoid jumpy splits
+vim.opt.confirm = true            -- ask to save instead of failing
+vim.opt.undofile = true           -- persistent undo across sessions
+vim.opt.list = true               -- show invisible whitespace
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+vim.opt.fillchars = { eob = " ", fold = " ", foldopen = "", foldclose = "" }
+vim.opt.completeopt = { "menu", "menuone", "noselect" }
+vim.opt.pumheight = 12            -- shorter completion popup
+vim.opt.laststatus = 3            -- single global statusline
+vim.opt.inccommand = "split"      -- live preview of :s/foo/bar
+vim.opt.smoothscroll = true
 
+-- Folding (handed to nvim-ufo)
+vim.opt.foldcolumn = "1"
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99
+vim.opt.foldenable = true
+
+-- Diagnostics: cleaner inline display
+vim.diagnostic.config({
+  virtual_text = { spacing = 4, prefix = "●", source = "if_many" },
+  severity_sort = true,
+  float = { border = "rounded", source = "if_many" },
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = " ",
+      [vim.diagnostic.severity.WARN]  = " ",
+      [vim.diagnostic.severity.INFO]  = " ",
+      [vim.diagnostic.severity.HINT]  = " ",
+    },
+  },
+})
