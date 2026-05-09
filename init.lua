@@ -1,3 +1,7 @@
+-- Leader must be set before lazy.nvim processes plugin specs
+vim.g.mapleader      = " "
+vim.g.maplocalleader = "\\"
+
 -- Perf: enable Lua module bytecode cache (50-80% faster cold startup on Neovim 0.9+)
 if vim.loader and vim.loader.enable then
   vim.loader.enable()
