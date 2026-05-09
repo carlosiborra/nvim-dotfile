@@ -121,8 +121,7 @@ nvim    # lazy.nvim bootstraps; Mason installs the toolchain on first run.
 |---|---|
 | `zbirenbaum/copilot.lua` | GitHub Copilot inline ghost text |
 | `folke/sidekick.nvim` | Hub for Claude Code / Codex / OpenCode / Copilot CLI + Copilot Next-Edit Suggestions |
-| `CopilotC-Nvim/CopilotChat.nvim` | In-buffer chat (`<leader>c*`) |
-| `olimorris/codecompanion.nvim` | Inline edits + chat actions (`<leader>n*`) |
+| `olimorris/codecompanion.nvim` | Chat panel + inline edits + 7-prompt slash-command library (`<leader>n*`) |
 
 ### Misc
 
@@ -156,7 +155,6 @@ nvim    # lazy.nvim bootstraps; Mason installs the toolchain on first run.
 |---|---|
 | `<leader>a` | AI: Sidekick (Claude / Codex / OpenCode / Copilot CLI) |
 | `<leader>b` | Buffers (`bd`/`bD` delete via mini.bufremove) |
-| `<leader>c` | CopilotChat |
 | `<leader>d` | Debug (DAP) |
 | `<leader>f` | Find / files (fzf-lua) |
 | `<leader>g` | Git (lazygit, diffview, gitlinker) |
@@ -171,6 +169,7 @@ nvim    # lazy.nvim bootstraps; Mason installs the toolchain on first run.
 | `<leader>s` | Search / Sessions / Spectre |
 | `<leader>T` | Tests (neotest / Jest) |
 | `<leader>u` | UI toggles |
+| `<leader>v` | Multi-cursor (vim-visual-multi: `<C-n>`, `<M-↑/↓>`) |
 | `<leader>x` | Trouble / diagnostics |
 | `<leader>1..4` | Harpoon slot select |
 

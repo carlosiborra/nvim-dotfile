@@ -24,7 +24,6 @@ return {
 						"dapui_console",
 						"aerial",
 						"noice",
-						"copilot-chat",
 						"codecompanion",
 						"spectre_panel",
 					}

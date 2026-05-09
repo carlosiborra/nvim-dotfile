@@ -28,7 +28,6 @@ return {
 				"toggleterm",
 				"lazyterm",
 				"codecompanion",
-				"copilot-chat",
 			},
 		},
 	},

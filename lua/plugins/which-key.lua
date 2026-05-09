@@ -12,7 +12,6 @@ return {
 		spec = {
 			{ "<leader>a", group = "AI: Sidekick (Claude/Codex/OpenCode/Copilot CLI)" },
 			{ "<leader>b", group = "Buffers" },
-			{ "<leader>c", group = "Chat (CopilotChat)" },
 			{ "<leader>d", group = "Debug (DAP)" },
 			{ "<leader>f", group = "Find / Files" },
 			{ "<leader>g", group = "Git" },
@@ -27,6 +26,7 @@ return {
 			{ "<leader>s", group = "Search / Sessions / Spectre" },
 			{ "<leader>T", group = "Tests (Jest)" },
 			{ "<leader>u", group = "UI toggles (Outline, Colors, Context)" },
+			{ "<leader>v", group = "Multi-cursor (VM)" },
 			{ "<leader>x", group = "Trouble / Diagnostics" },
 		},
 	},
